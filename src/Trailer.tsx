@@ -1,16 +1,16 @@
-import {AbsoluteFill, Sequence} from 'remotion';
-import {Intro} from './Intro/Intro';
-import {Logo} from './Logo/Logo';
-import {TeaserCodeFrame} from './TeaseCodeFrame';
-import {Transition} from './Transition';
+import { AbsoluteFill, Sequence } from 'remotion';
+import { Intro } from './Intro/Intro';
+import { Logo } from './Logo/Logo';
+import { TeaserCodeFrame } from './TeaseCodeFrame';
+import { Transition } from './Transition';
 
 export const Trailer: React.FC = () => {
 	return (
-		<AbsoluteFill style={{backgroundColor: 'white'}}>
-			<Sequence from={0} durationInFrames={85}>
+		<AbsoluteFill style={{ backgroundColor: 'white' }}>
+			<Sequence from={0} durationInFrames={2 * 85}>
 				<Intro offset={0} showText={false} />
 			</Sequence>
-			<Sequence from={75} durationInFrames={84}>
+			<Sequence from={2 * 75} durationInFrames={2 * 84}>
 				<Transition type="in">
 					<AbsoluteFill
 						style={{
@@ -22,7 +22,7 @@ export const Trailer: React.FC = () => {
 					</AbsoluteFill>
 				</Transition>
 			</Sequence>
-			<Sequence from={152} durationInFrames={163}>
+			<Sequence from={2 * 152} durationInFrames={2 * 163}>
 				<TeaserCodeFrame />
 			</Sequence>
 		</AbsoluteFill>
